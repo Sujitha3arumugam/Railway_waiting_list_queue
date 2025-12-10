@@ -18,7 +18,7 @@ class Passenger {
 }
 
 public class RailwayWaitingList {
-    private static final int MAX_CONFIRMED_TICKETS = 3;  // limit for confirmed tickets
+    private static final int MAX_CONFIRMED_TICKETS = 3;  
     private List<Passenger> confirmedList = new ArrayList<>();
     private Queue<Passenger> waitingList = new LinkedList<>();
 
@@ -47,7 +47,7 @@ public class RailwayWaitingList {
         }
 
         if (removed && !waitingList.isEmpty()) {
-            Passenger next = waitingList.poll();  // remove from queue
+            Passenger next = waitingList.poll();  
             confirmedList.add(next);
             System.out.println("🎟️ Waiting list passenger moved to confirmed: " + next.name);
         } else if (!removed) {
